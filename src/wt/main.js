@@ -5,58 +5,23 @@ const performCalculations = async () => {
     if (isMainThread) {
         const numCPUs = os.cpus().length;
         const workers = [];
-        const promises = [];
+        const counter = 10;
 
         for (let i = 0; i < numCPUs; i++) {
-            workers.push(new Worker('./worker.js'));
-            promises.push(
-                new Promise((resolve) => {
-                    workers[i].on('message', ({ status, data }) =>
-                        resolve({
-                            status,
-                            data,
-                        })
-                    );
-                })
-            );
+            workers.push(new Worker('./worker.js', { workerData: counter + i }));
         }
 
-        let counter = 10;
-
-        await Promise.all(
-            promises.map((promise) => {
-                return promise.then(({ status, data }) => ({
-                    status: status === 'resolved' ? 'resolved' : 'error',
-                    data,
-                }));
-            })
+        const results = await Promise.all(
+            workers.map((worker) => new Promise((resolve) => {
+                worker.on('message', (m) => resolve({ status: 'resolved', data: m }));
+                worker.on('error', () => resolve({ status: 'error', data: null }));
+            })),
         );
 
-        console.log('==============================================')
+        console.log(results)
 
-        for (const worker of workers){
-            worker.postMessage({number: counter++});
-        }
-
-        // Wait until all Promises are resolved
-        const resultArray = await Promise.all(promises);
-
-        console.log(resultArray);
-
-    } else {
-        console.log('main thread')
-        // Receive message from main thread
-        // parentPort.on("message", ({ number })=>{
-        //
-        //     try{
-        //         const incrementedNumber = number + 1;
-        //         parentPort.postMessage({status: 'resolved', data: incrementedNumber});
-        //     }catch(error){
-        //         parentPort.postMessage({status: 'error',data: null});
-        //     }
-        // });
     }
 
 };
 
-(async () => {await performCalculations()})();
+await performCalculations();

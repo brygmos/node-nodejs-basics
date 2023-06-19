@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef2454bc-70cc-4212-b414-54ba2a062e21" name="Changes" comment="">
+    <list default="true" id="ef2454bc-70cc-4212-b414-54ba2a062e21" name="Changes" comment="add cp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wt/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wt/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wt/worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wt/worker.js" afterDir="false" />
     </list>
@@ -59,6 +60,7 @@
       <workItem from="1687074588486" duration="10817000" />
       <workItem from="1687169814708" duration="2215000" />
       <workItem from="1687172053721" duration="402000" />
+      <workItem from="1687205143516" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="small changes">
       <created>1687165781256</created>
