@@ -1,16 +1,17 @@
-const remove = async () => {
-    const fs = require('fs').promises;
-    const path = require('path');
+import {access, unlink} from 'node:fs/promises';
+import {join} from 'node:path';
 
-    const filePath = path.join(__dirname, 'files', 'fileToRemove.txt');
+const remove = async () => {
+
+    const filePath = join('files', 'fileToRemove.txt');
 
     try {
-        await fs.access(filePath);
+        await access(filePath);
     } catch (err) {
         throw err.code === 'ENOENT' ? new Error('FS operation failed: File does not exist.') : err;
     }
 
-    await fs.unlink(filePath);
+    await unlink(filePath);
 };
 
 await remove();

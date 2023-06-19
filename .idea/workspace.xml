@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef2454bc-70cc-4212-b414-54ba2a062e21" name="Changes" comment="add cp">
+    <list default="true" id="ef2454bc-70cc-4212-b414-54ba2a062e21" name="Changes" comment="refactor: to esm">
+      <change afterPath="$PROJECT_DIR$/src/fs/files/wrongFilename.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cp/cp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cp/cp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/copy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/copy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/files/properFilename.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/files/fileToRemove.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/files_copy/dontLookAtMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/files_copy/fileToRead.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/files_copy/fileToRemove.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/files_copy/fresh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/files_copy/hello.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/files_copy/wrongFilename.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/read.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/read.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/rename.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/rename.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hash/calcHash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hash/calcHash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/streams/files/fileToWrite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/streams/files/fileToWrite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/streams/read.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/streams/read.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/streams/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/streams/write.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wt/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wt/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wt/worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wt/worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zip/compress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/zip/compress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zip/decompress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/zip/decompress.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="Worker_Threads" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,6 +155,7 @@
     <MESSAGE value="feat: add hash func" />
     <MESSAGE value="feat: implement stream functions" />
     <MESSAGE value="feat: implement zip" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement zip" />
+    <MESSAGE value="refactor: to esm" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: to esm" />
   </component>
 </project>

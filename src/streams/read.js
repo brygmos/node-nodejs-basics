@@ -1,9 +1,11 @@
+import {
+    createReadStream
+} from 'node:fs';
+import { join } from 'node:path';
+
 const read = async () => {
-    const fs = require('fs');
-
-    const filePath = './files/fileToRead.txt';
-
-    const readStream = fs.createReadStream(filePath);
+    const filePath = join('files', 'fileToRead.txt')
+    const readStream = createReadStream(filePath);
 
     readStream.on('data', (chunk) => {
         process.stdout.write(chunk);

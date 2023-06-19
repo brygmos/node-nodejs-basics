@@ -1,5 +1,5 @@
-const { Worker, isMainThread } = require('worker_threads');
-const os = require('os');
+import { isMainThread, Worker } from 'worker_threads'
+import os from 'os';
 
 const performCalculations = async () => {
     if (isMainThread) {
@@ -17,11 +17,8 @@ const performCalculations = async () => {
                 worker.on('error', () => resolve({ status: 'error', data: null }));
             })),
         );
-
         console.log(results)
-
     }
-
 };
 
 await performCalculations();

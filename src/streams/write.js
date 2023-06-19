@@ -1,9 +1,9 @@
+import {createWriteStream} from 'node:fs';
+import {join} from 'node:path';
+
 const write = async () => {
-    const fs = require('fs');
-
-    const filePath = './files/fileToWrite.txt';
-
-    const writeStream = fs.createWriteStream(filePath);
+    const filePath = join('files', 'fileToWrite.txt')
+    const writeStream = createWriteStream(filePath);
     console.log('type something: (Ctrl+C to quit)')
 
     process.stdin.pipe(writeStream);

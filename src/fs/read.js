@@ -1,16 +1,16 @@
-const read = async () => {
-    const fs = require('fs').promises;
-    const path = require('path');
+import {access, readFile} from 'node:fs/promises';
+import {join} from 'node:path';
 
-    const filePath = path.join(__dirname, 'files', 'fileToRead.txt');
+const read = async () => {
+    const filePath = join('files', 'fileToRead.txt');
 
     try {
-        await fs.access(filePath);
+        await access(filePath);
     } catch (err) {
         throw err.code === 'ENOENT' ? new Error('FS operation failed: File does not exist.') : err;
     }
 
-    const fileContentBuffer = await fs.readFile(filePath);
+    const fileContentBuffer = await readFile(filePath);
 
     console.log(fileContentBuffer.toString());
 };

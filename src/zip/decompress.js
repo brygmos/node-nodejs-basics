@@ -1,14 +1,16 @@
-const decompress = async () => {
-    const fs = require('fs');
-    const zlib = require('zlib');
+import {
+    createWriteStream, createReadStream
+} from 'node:fs';
+import { createGunzip } from 'zlib';
 
+const decompress = async () => {
     const filePath = './files/fileToCompress.txt';
 
-    const readStream = fs.createReadStream('./files/archive.gz');
+    const readStream = createReadStream('./files/archive.gz');
 
-    const writeStream = fs.createWriteStream(filePath);
+    const writeStream = createWriteStream(filePath);
 
-    const gunzipStream = zlib.createGunzip();
+    const gunzipStream = createGunzip();
 
     readStream.pipe(gunzipStream).pipe(writeStream);
 

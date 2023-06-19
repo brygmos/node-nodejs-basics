@@ -1,5 +1,5 @@
-const { spawn } = require('child_process');
-const { stdout, stdin} = require('node:process')
+import {stdout} from 'node:process';
+import {spawn} from 'node:child_process';
 
 const spawnChildProcess = async (args) => {
     return new Promise((resolve, reject) => {

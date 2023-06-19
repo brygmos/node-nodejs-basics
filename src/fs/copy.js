@@ -1,26 +1,26 @@
-const copy = async () => {
-    const fs = require('fs').promises;
-    const path = require('path');
+import {access, copyFile, mkdir, readdir,} from 'node:fs/promises';
+import {join} from 'node:path';
 
-    const sourcePath = path.join(__dirname, 'files');
-    const destPath = path.join(__dirname, 'files_copy');
+const copy = async () => {
+    const sourcePath = join('files');
+    const destPath = join('files_copy');
 
     try {
-        await fs.access(sourcePath);
-        await fs.access(destPath);
+        await access(sourcePath);
+        await access(destPath);
         throw new Error('FS operation failed: Destination directory already exists.');
     } catch (err) {
         if (err.code !== 'ENOENT') throw err;
     }
 
-    await fs.mkdir(destPath);
+    await mkdir(destPath);
 
-    const files = await fs.readdir(sourcePath);
+    const files = await readdir(sourcePath);
 
     for (let file of files) {
-        const srcFile = path.join(sourcePath, file);
-        const destFile = path.join(destPath, file);
-        await fs.copyFile(srcFile, destFile);
+        const srcFile = join(sourcePath, file);
+        const destFile = join(destPath, file);
+        await copyFile(srcFile, destFile);
     }
 };
 

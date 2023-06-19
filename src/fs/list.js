@@ -1,16 +1,16 @@
-const list = async () => {
-    const fs = require('fs').promises;
-    const path = require('path');
+import {access, readdir} from 'node:fs/promises';
+import {join} from 'node:path';
 
-    const filesDirPath = path.join(__dirname, 'files');
+const list = async () => {
+    const filesDirPath = join('files');
 
     try {
-        await fs.access(filesDirPath);
+        await access(filesDirPath);
     } catch (err) {
         throw err.code === 'ENOENT' ? new Error('FS operation failed: Directory does not exist.') : err;
     }
 
-    const fileNames = await fs.readdir(filesDirPath);
+    const fileNames = await readdir(filesDirPath);
 
     console.log(fileNames);
 };
