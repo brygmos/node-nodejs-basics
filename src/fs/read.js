@@ -15,4 +15,4 @@ const read = async () => {
     console.log(fileContentBuffer.toString());
 };
 
-await read();
+await read()
