@@ -17,6 +17,4 @@ const rename = async () => {
 
 };
 
-// await rename();
-
 await rename();
