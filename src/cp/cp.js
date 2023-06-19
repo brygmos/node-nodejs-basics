@@ -1,6 +1,26 @@
+import {stdout} from 'node:process';
+import {spawn} from 'node:child_process';
+
 const spawnChildProcess = async (args) => {
-    // Write your code here
+    return new Promise((resolve, reject) => {
+        const child = spawn('node', ['files/script.js', ...args], {
+            stdio: [process.stdin, 'pipe', 'pipe'],
+        });
+
+        child.stdout.on('data', (data) => {
+            console.log(`Received data from script.js: ${data}`);
+            stdout.write(data);
+        });
+
+        child.on('error', (err) => {
+            reject(err);
+        });
+
+        child.on("close", () => {
+            resolve();
+        });
+
+    });
 };
 
-// Put your arguments in function call to test this functionality
-spawnChildProcess( /* [someArgument1, someArgument2, ...] */);
+spawnChildProcess(["arg1", "arg2"]);
