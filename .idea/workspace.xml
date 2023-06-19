@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef2454bc-70cc-4212-b414-54ba2a062e21" name="Changes" comment="feat: implement zip" />
+    <list default="true" id="ef2454bc-70cc-4212-b414-54ba2a062e21" name="Changes" comment="feat: implement zip">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cp/cp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cp/cp.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Zlib" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,7 +33,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "18.15.0",
     "javascript.nodejs.core.library.typings.version": "18.15.0",
-    "last_opened_file_path": "C:/domains/node-nodejs-basics/src/zip/files",
+    "last_opened_file_path": "C:/domains/node-nodejs-basics/src/cp",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
@@ -39,6 +42,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\domains\node-nodejs-basics\src\cp" />
+      <recent name="C:\domains\node-nodejs-basics\src\cp\files" />
       <recent name="C:\domains\node-nodejs-basics\src\zip\files" />
       <recent name="C:\domains\node-nodejs-basics\src\modules" />
     </key>
@@ -105,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687172402517</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="in porogress">
+      <created>1687197569632</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687197569632</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +141,7 @@
     <MESSAGE value="feat: add hash func" />
     <MESSAGE value="feat: implement stream functions" />
     <MESSAGE value="feat: implement zip" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement zip" />
+    <MESSAGE value="in porogress" />
+    <option name="LAST_COMMIT_MESSAGE" value="in porogress" />
   </component>
 </project>
